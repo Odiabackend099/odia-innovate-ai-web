@@ -1,7 +1,9 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Stats = () => {
+  const [scrollY, setScrollY] = useState(0);
+  
   const stats = [
     { number: '50+', label: 'AI Solutions Deployed', icon: '🚀' },
     { number: '15+', label: 'African Languages', icon: '🌍' },
@@ -9,13 +11,43 @@ const Stats = () => {
     { number: '24/7', label: 'Support Available', icon: '💬' },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Trusted by Businesses Across Africa
-          </h2>
+    <section className="relative py-20 bg-gradient-to-br from-white via-blue-50 to-white overflow-hidden">
+      {/* Parallax Background Elements */}
+      <div className="absolute inset-0">
+        <div 
+          className="absolute top-10 right-10 w-40 h-40 bg-blue-200 rounded-full opacity-10"
+          style={{ transform: `translateY(${scrollY * 0.15}px) rotate(${scrollY * 0.1}deg)` }}
+        />
+        <div 
+          className="absolute bottom-20 left-10 w-32 h-32 bg-blue-300 rounded-full opacity-15"
+          style={{ transform: `translateY(${scrollY * -0.1}px) rotate(${scrollY * -0.1}deg)` }}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          className="text-center mb-16"
+          style={{
+            transform: `translateY(${scrollY * 0.05}px)`,
+          }}
+        >
+          <div className="flex items-center justify-center mb-6">
+            <img 
+              src="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png" 
+              alt="ODIA.dev Logo" 
+              className="w-12 h-12 mr-3"
+            />
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              Trusted Across Africa
+            </h2>
+          </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our AI solutions are making a real impact for companies from Lagos to Nairobi
           </p>
@@ -25,14 +57,20 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center group hover:transform hover:scale-105 transition-all duration-300"
+              className="text-center group hover:transform hover:scale-105 transition-all duration-500"
+              style={{
+                transform: `translateY(${scrollY * (0.02 + index * 0.01)}px)`,
+              }}
             >
-              <div className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-2xl p-8 mb-4 group-hover:shadow-lg transition-shadow duration-300">
-                <div className="text-4xl mb-4">{stat.icon}</div>
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  {stat.number}
+              <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 mb-4 group-hover:shadow-2xl transition-all duration-500 border border-blue-100 group-hover:border-blue-200 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10">
+                  <div className="text-5xl mb-4">{stat.icon}</div>
+                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 font-semibold">{stat.label}</div>
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             </div>
           ))}

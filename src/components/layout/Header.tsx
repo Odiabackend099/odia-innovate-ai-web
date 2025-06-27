@@ -16,16 +16,25 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-blue-100">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">O</span>
+            <Link to="/" className="flex items-center group">
+              <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800 p-1 group-hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png" 
+                  alt="ODIA.dev Logo" 
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
-              <span className="ml-2 text-xl font-bold text-gray-900">ODIA.dev</span>
+              <div className="ml-3">
+                <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                  ODIA.dev
+                </span>
+                <div className="text-xs text-blue-600 font-medium">AI Solutions Africa</div>
+              </div>
             </Link>
           </div>
 
@@ -36,10 +45,10 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                  className={`px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${
                     location.pathname === item.href
-                      ? 'text-blue-600 border-b-2 border-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? 'text-white bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                   }`}
                 >
                   {item.name}
@@ -50,7 +59,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300">
+            <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
               Get Started
             </button>
           </div>
@@ -59,9 +68,9 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-300 p-2"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
@@ -69,22 +78,22 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+            <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-white/95 backdrop-blur-sm border-t border-blue-100">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
+                  className={`block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-lg ${
                     location.pathname === item.href
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? 'text-white bg-gradient-to-r from-blue-600 to-blue-700'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <button className="w-full mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300">
+              <button className="w-full mt-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300">
                 Get Started
               </button>
             </div>
