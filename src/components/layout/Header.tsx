@@ -15,8 +15,15 @@ const Header = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const isActiveRoute = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname === href;
+  };
+
   return (
-    <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-blue-100">
+    <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-blue-200">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -46,9 +53,9 @@ const Header = () => {
                   key={item.name}
                   to={item.href}
                   className={`px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${
-                    location.pathname === item.href
+                    isActiveRoute(item.href)
                       ? 'text-white bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                      : 'text-blue-700 hover:text-blue-800 hover:bg-blue-100'
                   }`}
                 >
                   {item.name}
@@ -59,16 +66,19 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <Link 
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors duration-300 p-2"
+              className="text-blue-700 hover:text-blue-800 transition-colors duration-300 p-2"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -78,24 +88,28 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-white/95 backdrop-blur-sm border-t border-blue-100">
+            <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-white/95 backdrop-blur-sm border-t border-blue-200">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   className={`block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-lg ${
-                    location.pathname === item.href
+                    isActiveRoute(item.href)
                       ? 'text-white bg-gradient-to-r from-blue-600 to-blue-700'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                      : 'text-blue-700 hover:text-blue-800 hover:bg-blue-100'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <button className="w-full mt-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300">
+              <Link 
+                to="/contact"
+                className="block w-full mt-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         )}
