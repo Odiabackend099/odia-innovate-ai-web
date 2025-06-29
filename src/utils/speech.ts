@@ -56,8 +56,8 @@ export class SpeechToText {
       onResult(transcript, isFinal);
     };
 
-    this.recognition.onerror = (event: any) => {
-      onError(`Speech recognition error: ${event.error || 'Unknown error'}`);
+    this.recognition.onerror = () => {
+      onError('Speech recognition error: Unknown error');
     };
 
     this.recognition.addEventListener('start', () => {
