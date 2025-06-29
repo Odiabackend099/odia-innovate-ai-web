@@ -1,11 +1,12 @@
 
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -22,6 +23,11 @@ const Header = () => {
     return location.pathname === href;
   };
 
+  const handleGetStarted = () => {
+    navigate('/contact');
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-blue-200">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,18 +35,21 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group">
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800 p-1 group-hover:scale-105 transition-transform duration-300">
+              <div className="w-12 h-12 rounded-full overflow-hidden bg-gradient-to-br from-blue-600 to-blue-800 p-1 group-hover:scale-105 transition-transform duration-300 relative">
                 <img 
                   src="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png" 
                   alt="ODIA.dev Logo" 
                   className="w-full h-full object-contain rounded-full"
                 />
+                <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-gradient-to-r from-green-400 to-green-500 rounded-full animate-pulse"></div>
               </div>
               <div className="ml-3">
                 <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                   ODIA.dev
                 </span>
-                <div className="text-xs text-blue-600 font-medium">AI Solutions Africa</div>
+                <div className="text-xs text-blue-600 font-medium flex items-center">
+                  🇳🇬 AI Solutions Africa
+                </div>
               </div>
             </Link>
           </div>
@@ -52,7 +61,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg ${
+                  className={`px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg hover:scale-105 ${
                     isActiveRoute(item.href)
                       ? 'text-white bg-gradient-to-r from-blue-600 to-blue-700 shadow-lg'
                       : 'text-blue-700 hover:text-blue-800 hover:bg-blue-100'
@@ -66,19 +75,19 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link 
-              to="/contact"
+            <button 
+              onClick={handleGetStarted}
               className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              Get Started
-            </Link>
+              🚀 Get Started
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-blue-700 hover:text-blue-800 transition-colors duration-300 p-2"
+              className="text-blue-700 hover:text-blue-800 transition-colors duration-300 p-2 hover:bg-blue-100 rounded-lg"
             >
               {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -103,13 +112,12 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Link 
-                to="/contact"
+              <button 
+                onClick={handleGetStarted}
                 className="block w-full mt-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 text-center"
-                onClick={() => setIsMenuOpen(false)}
               >
-                Get Started
-              </Link>
+                🚀 Get Started
+              </button>
             </div>
           </div>
         )}
