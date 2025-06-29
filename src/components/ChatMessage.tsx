@@ -114,7 +114,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
                 message.status === 'read' ? 'bg-[#25D366]' : 'bg-gray-300'
               }`} />
               <div className={`w-1 h-1 rounded-full ${
-                message.status === 'delivered' || message.status === 'read' ? 'bg-gray-400' :
+                message.status === 'delivered' ? 'bg-gray-400' :
                 message.status === 'read' ? 'bg-[#25D366]' : 'bg-gray-300'
               }`} />
             </div>

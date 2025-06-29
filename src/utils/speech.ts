@@ -42,11 +42,11 @@ export class SpeechToText {
     this.recognition.continuous = options.continuous || false;
     this.recognition.interimResults = options.interimResults || true;
 
-    this.recognition.onresult = (event) => {
+    this.recognition.onresult = (event: any) => {
       let transcript = '';
       let isFinal = false;
 
-      for (let i = event.resultIndex; i < event.results.length; i++) {
+      for (let i = event.resultIndex || 0; i < event.results.length; i++) {
         transcript += event.results[i][0].transcript;
         if (event.results[i].isFinal) {
           isFinal = true;
@@ -56,17 +56,17 @@ export class SpeechToText {
       onResult(transcript, isFinal);
     };
 
-    this.recognition.onerror = (event) => {
-      onError(`Speech recognition error: ${event.error}`);
+    this.recognition.onerror = (event: any) => {
+      onError(`Speech recognition error: ${event.error || 'Unknown error'}`);
     };
 
-    this.recognition.onstart = () => {
+    this.recognition.addEventListener('start', () => {
       this.isListening = true;
-    };
+    });
 
-    this.recognition.onend = () => {
+    this.recognition.addEventListener('end', () => {
       this.isListening = false;
-    };
+    });
 
     this.recognition.start();
   }

@@ -40,9 +40,12 @@ export const useChat = () => {
       // Show typing indicator
       setIsTyping(true);
 
-      // Send to API
+      // Send to API with required message_type
       const response = await sendMessageAPI({
-        ...request,
+        message: request.message,
+        language: request.language,
+        message_type: request.message_type || 'text',
+        user_id: request.user_id,
         session_id: sessionIdRef.current,
       });
 

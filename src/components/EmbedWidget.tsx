@@ -65,6 +65,30 @@ const EmbedWidget: React.FC<EmbedWidgetProps> = ({ config = {} }) => {
     return null; // Avoid SSR issues
   }
 
+  const customCSS = `
+    .odiaaa-embed-widget {
+      --odiaaa-primary: ${config.customColors?.primary || '#25D366'};
+      --odiaaa-secondary: ${config.customColors?.secondary || '#128C7E'};
+      --odiaaa-background: ${config.customColors?.background || '#ECE5DD'};
+    }
+    
+    .odiaaa-embed-widget * {
+      box-sizing: border-box;
+    }
+    
+    @media (max-width: 640px) {
+      .odiaaa-embed-widget {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+      }
+    }
+  `;
+
   return (
     <div 
       className="odiaaa-embed-widget"
@@ -78,29 +102,7 @@ const EmbedWidget: React.FC<EmbedWidgetProps> = ({ config = {} }) => {
       <OdiaaaWidget isEmbedded={true} />
       
       {/* Custom CSS for theming */}
-      <style jsx>{`
-        .odiaaa-embed-widget {
-          --odiaaa-primary: ${config.customColors?.primary || '#25D366'};
-          --odiaaa-secondary: ${config.customColors?.secondary || '#128C7E'};
-          --odiaaa-background: ${config.customColors?.background || '#ECE5DD'};
-        }
-        
-        .odiaaa-embed-widget * {
-          box-sizing: border-box;
-        }
-        
-        @media (max-width: 640px) {
-          .odiaaa-embed-widget {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            bottom: 0 !important;
-            width: 100vw !important;
-            height: 100vh !important;
-          }
-        }
-      `}</style>
+      <style dangerouslySetInnerHTML={{ __html: customCSS }} />
     </div>
   );
 };
