@@ -6,6 +6,7 @@ import ChatWidget from '../components/ChatWidget';
 import ContactHero from '../components/contact/ContactHero';
 import ContactForm from '../components/contact/ContactForm';
 import ContactInfo from '../components/contact/ContactInfo';
+import OdiaaaWidget from '../components/OdiaaaWidget';
 
 const Contact = () => {
   return (
@@ -26,6 +27,9 @@ const Contact = () => {
 
       <Footer />
       <ChatWidget />
+      
+      {/* Add ODIAAA Widget */}
+      <OdiaaaWidget />
     </div>
   );
 };
