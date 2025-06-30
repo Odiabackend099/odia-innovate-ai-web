@@ -1,10 +1,14 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Bot, Mic, MessageSquare, Stethoscope, Building, Zap } from 'lucide-react';
 
 const Services = () => {
+  const navigate = useNavigate();
+
   const services = [
     {
+      id: 'voice-automation',
       icon: <Mic className="w-8 h-8" />,
       title: 'Voice Automation',
       description: 'Transform customer service with intelligent voice systems that understand multiple African languages and dialects.',
@@ -13,6 +17,7 @@ const Services = () => {
       flag: '🇳🇬'
     },
     {
+      id: 'intelligent-chatbots',
       icon: <MessageSquare className="w-8 h-8" />,
       title: 'Intelligent Chatbots',
       description: 'Deploy smart chatbots that understand context, culture, and local business practices across Africa.',
@@ -21,6 +26,7 @@ const Services = () => {
       flag: '🇰🇪'
     },
     {
+      id: 'african-language-nlp',
       icon: <Bot className="w-8 h-8" />,
       title: 'African Language NLP',
       description: 'Advanced natural language processing specifically trained on African languages and cultural contexts.',
@@ -29,6 +35,7 @@ const Services = () => {
       flag: '🇬🇭'
     },
     {
+      id: 'healthcare-ai',
       icon: <Stethoscope className="w-8 h-8" />,
       title: 'Healthcare AI',
       description: 'Specialized AI solutions for African healthcare challenges, from diagnosis assistance to patient management.',
@@ -37,6 +44,7 @@ const Services = () => {
       flag: '🇿🇦'
     },
     {
+      id: 'government-ai',
       icon: <Building className="w-8 h-8" />,
       title: 'Government AI',
       description: 'Streamline public services with AI solutions designed for African government and civic applications.',
@@ -45,6 +53,7 @@ const Services = () => {
       flag: '🇪🇹'
     },
     {
+      id: 'custom-solutions',
       icon: <Zap className="w-8 h-8" />,
       title: 'Custom Solutions',
       description: 'Tailored AI solutions for unique African business challenges and opportunities.',
@@ -53,6 +62,14 @@ const Services = () => {
       flag: '🇷🇼'
     }
   ];
+
+  const handleLearnMore = (serviceId: string) => {
+    navigate(`/service/${serviceId}`);
+  };
+
+  const handleStartJourney = () => {
+    navigate('/contact');
+  };
 
   return (
     <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
@@ -98,7 +115,7 @@ const Services = () => {
                 {service.description}
               </p>
               
-              <div className="space-y-2">
+              <div className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center text-sm">
                     <div className={`w-2 h-2 bg-gradient-to-br ${service.gradient} rounded-full mr-3`}></div>
@@ -107,7 +124,10 @@ const Services = () => {
                 ))}
               </div>
               
-              <button className={`mt-6 w-full bg-gradient-to-r ${service.gradient} text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
+              <button 
+                onClick={() => handleLearnMore(service.id)}
+                className={`w-full bg-gradient-to-r ${service.gradient} text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+              >
                 Learn More 🚀
               </button>
             </div>
@@ -115,7 +135,10 @@ const Services = () => {
         </div>
 
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-12 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+          <button 
+            onClick={handleStartJourney}
+            className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-12 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+          >
             🌟 Start Your AI Journey Today
           </button>
         </div>
