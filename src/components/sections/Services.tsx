@@ -72,23 +72,23 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-br from-background to-surface relative overflow-hidden">
       {/* African Pattern Background */}
       <div className="absolute inset-0 opacity-5">
         <div 
           className="w-full h-full"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff6b35' fill-opacity='0.4'%3E%3Cpath d='M40 40c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm20 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23479afc' fill-opacity='0.1'%3E%3Cpath d='M40 40c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm20 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z'/%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent mb-6">
             AI Solutions Across Africa 🌍
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             From Lagos to Cairo, Nairobi to Cape Town - we're building AI solutions 
             that understand Africa's unique challenges and opportunities.
           </p>
@@ -98,7 +98,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-200"
+              className="group bg-card/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-border hover:border-primary/50"
             >
               <div className="flex items-center mb-6">
                 <div className={`bg-gradient-to-br ${service.gradient} text-white p-4 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -107,11 +107,11 @@ const Services = () => {
                 <span className="ml-3 text-2xl">{service.flag}</span>
               </div>
               
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors">
+              <h3 className="text-2xl font-bold text-card-foreground mb-4 group-hover:text-primary transition-colors">
                 {service.title}
               </h3>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-muted-foreground mb-6 leading-relaxed">
                 {service.description}
               </p>
               
@@ -119,7 +119,7 @@ const Services = () => {
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center text-sm">
                     <div className={`w-2 h-2 bg-gradient-to-br ${service.gradient} rounded-full mr-3`}></div>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-card-foreground">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -137,7 +137,7 @@ const Services = () => {
         <div className="text-center mt-16">
           <button 
             onClick={handleStartJourney}
-            className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-12 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+            className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-12 py-4 rounded-xl font-bold text-lg hover:from-primary-glow hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
           >
             🌟 Start Your AI Journey Today
           </button>

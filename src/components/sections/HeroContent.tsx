@@ -31,23 +31,23 @@ const HeroContent: React.FC<HeroContentProps> = ({
           <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-green-400 to-green-500 rounded-full animate-pulse"></div>
         </div>
         <div>
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
             ODIA.dev
           </h1>
-          <p className="text-sm text-blue-600 font-medium flex items-center">
+          <p className="text-sm text-primary font-medium flex items-center">
             🇳🇬 Powered by African Innovation
           </p>
         </div>
       </div>
 
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-        <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
+        <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
           {currentText}
         </span>
-        <span className="animate-pulse text-blue-600">|</span>
+        <span className="animate-pulse text-primary">|</span>
       </h1>
       
-      <p className="text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed">
+      <p className="text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
         Empowering African businesses with cutting-edge AI technology. 
         From Lagos to Nairobi, we bring the future to Africa today. 🌍
       </p>
@@ -55,7 +55,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
       <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
         <button 
           onClick={onTalkToAI}
-          className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+          className="group bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg hover:from-primary-glow hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
         >
           <span className="group-hover:scale-105 transition-transform duration-300 inline-block">
             🤖 Talk to Our AI Agent
@@ -63,19 +63,19 @@ const HeroContent: React.FC<HeroContentProps> = ({
         </button>
         <button 
           onClick={onExploreServices}
-          className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 hover:text-white transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          className="border-2 border-primary text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gradient-to-r hover:from-primary hover:to-primary-glow hover:text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
         >
           🚀 Explore Services
         </button>
       </div>
 
-      <div className="mt-12 flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-500">
+      <div className="mt-12 flex items-center justify-center lg:justify-start space-x-8 text-sm text-muted-foreground">
         <div className="flex items-center">
           <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-green-500 rounded-full mr-2 animate-pulse"></div>
           Available 24/7 🕐
         </div>
         <div className="flex items-center">
-          <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full mr-2 animate-pulse"></div>
+          <div className="w-3 h-3 bg-gradient-to-r from-primary to-primary-glow rounded-full mr-2 animate-pulse"></div>
           15+ African Languages 🗣️
         </div>
       </div>
