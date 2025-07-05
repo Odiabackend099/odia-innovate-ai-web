@@ -43,7 +43,7 @@ const CofounderSection = () => {
             <div className="relative bg-card/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-border">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png" 
+                  src="/lovable-uploads/99c152aa-1d3c-4930-b657-e7b6c4797733.png" 
                   alt="Eva Jensen, Co-founder of ODIA.dev" 
                   className="w-full h-full object-cover"
                 />

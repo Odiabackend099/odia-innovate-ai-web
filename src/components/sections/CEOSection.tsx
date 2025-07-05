@@ -20,7 +20,7 @@ const CEOSection = () => {
             <div className="relative bg-card/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-border">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png" 
+                  src="/lovable-uploads/b2deb74a-bc63-4e33-897b-5ef74c40a832.png" 
                   alt="Austyn, CEO of ODIA.dev" 
                   className="w-full h-full object-cover"
                 />
