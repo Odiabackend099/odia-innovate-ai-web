@@ -45,7 +45,7 @@ const CofounderSection = () => {
                 <img 
                   src="/lovable-uploads/99c152aa-1d3c-4930-b657-e7b6c4797733.png" 
                   alt="Eva Jensen, Co-founder of ODIA.dev" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                 />
               </div>
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center shadow-lg">

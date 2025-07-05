@@ -22,7 +22,7 @@ const CEOSection = () => {
                 <img 
                   src="/lovable-uploads/e4ecf514-3800-415c-b885-be4fdded4cc7.png" 
                   alt="Austyn, CEO of ODIA.dev" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center shadow-lg">
