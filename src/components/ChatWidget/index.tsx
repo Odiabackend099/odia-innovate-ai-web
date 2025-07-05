@@ -72,7 +72,7 @@ const ChatWidget = () => {
     }
     
     if (message.includes('price') || message.includes('cost') || message.includes('pricing')) {
-      return "Our pricing is tailored to each client's needs. We offer flexible packages starting from $500/month for small businesses, with enterprise solutions available. Would you like me to connect you with our sales team for a custom quote?";
+      return "We focus on creating value through innovative AI solutions. Our approach is collaborative - we work with each client to understand their unique needs and build custom solutions. Let's discuss how AI can transform your business operations and improve efficiency.";
     }
     
     if (message.includes('language') || message.includes('african')) {

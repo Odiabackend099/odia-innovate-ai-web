@@ -18,6 +18,25 @@
     <meta name="twitter:site" content="@odiadev" />
     <meta name="twitter:image" content="https://odia.dev/og-image.jpg" />
 
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ODIA.dev">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#479afc">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png">
+    <link rel="apple-touch-icon" href="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#479afc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0A0A0B" media="(prefers-color-scheme: dark)">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,5 +46,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

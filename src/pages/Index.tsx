@@ -12,6 +12,7 @@ import Stats from '../components/sections/Stats';
 import CaseStudies from '../components/sections/CaseStudies';
 import CallToAction from '../components/sections/CallToAction';
 import ChatWidget from '../components/ChatWidget';
+import PWAInstallPrompt from '../components/PWAInstallPrompt';
 
 const Index = () => {
   return (
@@ -29,6 +30,7 @@ const Index = () => {
       </main>
       <Footer />
       <ChatWidget />
+      <PWAInstallPrompt />
     </div>
   );
 };
