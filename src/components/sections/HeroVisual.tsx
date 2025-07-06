@@ -13,33 +13,24 @@ const HeroVisual: React.FC<HeroVisualProps> = ({ scrollY }) => {
         transform: `translateY(${scrollY * -0.1}px)`,
       }}
     >
-      {/* Background African pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div 
-          className="w-full h-full rounded-3xl"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ff6b35' fill-opacity='0.3'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
-      </div>
-      
-      <div className="relative z-10 bg-card/90 backdrop-blur-sm rounded-3xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-all duration-500 border border-border">
+      {/* Professional card with AI avatar */}
+      <div className="relative webflow-card p-8 transform hover:scale-105 transition-all duration-500">
         <div className="text-center">
-          <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-glow rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg relative overflow-hidden">
+          <div className="w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center shadow-xl relative overflow-hidden">
             <img 
-              src="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png" 
+              src="/lovable-uploads/cf9b0f82-daed-451d-927c-d1ea453458c1.png" 
               alt="AI Assistant" 
-              className="w-12 h-12 object-contain"
+              className="w-full h-full object-cover rounded-full"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary-foreground/20"></div>
+            <div className="absolute inset-0 bg-primary/20 rounded-full"></div>
           </div>
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent mb-4">
-            Meet ODIAAA 🇳🇬
+          <h3 className="text-2xl font-bold webflow-text-gradient mb-4">
+            Meet ODIA AI
           </h3>
           <p className="text-muted-foreground mb-6 font-medium">Your intelligent AI assistant for Africa</p>
-          <div className="bg-gradient-to-br from-surface to-surface-elevated rounded-2xl p-6 text-left border border-border">
+          <div className="webflow-card bg-surface p-6 text-left">
             <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                 <img 
                   src="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png" 
                   alt="AI" 
@@ -48,14 +39,17 @@ const HeroVisual: React.FC<HeroVisualProps> = ({ scrollY }) => {
               </div>
               <div className="flex-1">
                 <p className="text-foreground leading-relaxed">
-                  Sannu! I'm ODIAAA, your AI assistant. How can I help transform your business across Africa? 🌍✨
+                  Hello! I'm your AI assistant designed specifically for African businesses. How can I help transform your operations today?
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 to-green-600/10 rounded-3xl transform rotate-6 opacity-30 blur-sm"></div>
+      
+      {/* Subtle background elements */}
+      <div className="absolute -z-10 top-4 left-4 w-full h-full bg-primary/5 rounded-3xl"></div>
+      <div className="absolute -z-20 top-8 left-8 w-full h-full bg-secondary/10 rounded-3xl"></div>
     </div>
   );
 };
