@@ -12,7 +12,7 @@ const CEOSection = () => {
               <div className="aspect-square rounded-xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/e4ecf514-3800-415c-b885-be4fdded4cc7.png" 
-                  alt="Austyn, CEO of ODIA.dev" 
+                  alt="Austyn, CEO & Founder of ODIA.dev" 
                   className="w-full h-full object-cover"
                 />
               </div>

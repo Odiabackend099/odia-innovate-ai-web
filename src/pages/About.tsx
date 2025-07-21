@@ -7,21 +7,33 @@ import ChatWidget from '../components/ChatWidget';
 const About = () => {
   const team = [
     {
-      name: 'Dr. Amina Kone',
+      name: 'Austyn',
       role: 'CEO & Founder',
-      bio: 'AI researcher with 15+ years experience. Former Google AI team member.',
+      bio: 'Visionary leader driving AI innovation across Africa. Passionate about bridging technological gaps and empowering African businesses.',
+      image: '/lovable-uploads/e4ecf514-3800-415c-b885-be4fdded4cc7.png'
+    },
+    {
+      name: 'Eva Jensen',
+      role: 'Co-founder & CTO',
+      bio: 'Technical excellence architect with deep expertise in AI systems. Leading our technical vision for Africa.',
+      image: '/lovable-uploads/99c152aa-1d3c-4930-b657-e7b6c4797733.png'
+    },
+    {
+      name: 'Dr. Amina Kone',
+      role: 'Head of AI Research',
+      bio: 'AI researcher with 15+ years experience. Former Google AI team member specializing in African language processing.',
       image: '/lovable-uploads/a6898fbe-7d74-4180-955a-9fd88a12a27c.png'
     },
     {
       name: 'Kwame Asante',
-      role: 'CTO',
-      bio: 'ML engineer specializing in African language processing and NLP.',
+      role: 'Senior ML Engineer',
+      bio: 'ML engineer specializing in African language processing and NLP systems development.',
       image: '/lovable-uploads/c158171e-b9d7-401b-bc19-a2cd316227a5.png'
     },
     {
       name: 'Fatima Okonkwo',
       role: 'Head of Products',
-      bio: 'Product strategist focused on AI solutions for African markets.',
+      bio: 'Product strategist focused on AI solutions for African markets and user experience.',
       image: '/lovable-uploads/f7d1e5e1-2175-4874-a21f-28dc1af09b34.png'
     }
   ];
@@ -134,11 +146,11 @@ const About = () => {
               Meet Our Team
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Passionate African technologists building the future of AI
+              Passionate technologists building the future of AI for Africa
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div
                 key={index}
