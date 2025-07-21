@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MessageSquare, Mic, Globe, Zap } from 'lucide-react';
 
@@ -40,7 +41,7 @@ const AIAvatarShowcase = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent mb-6">
-            Meet ODIAAA 🤖
+            Meet Agent Odia 🤖
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Your intelligent AI companion, trained on African languages, cultures, and business practices. 
@@ -58,12 +59,12 @@ const AIAvatarShowcase = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-glow rounded-full flex items-center justify-center">
                     <img 
                       src="/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png" 
-                      alt="ODIAAA AI Avatar" 
+                      alt="Agent Odia AI Avatar" 
                       className="w-8 h-8 object-contain"
                     />
                   </div>
                   <div className="ml-3">
-                    <div className="font-bold text-primary">ODIAAA</div>
+                    <div className="font-bold text-primary">Agent Odia</div>
                     <div className="text-sm text-muted-foreground">AI Assistant • Online</div>
                   </div>
                   <div className="ml-auto flex space-x-1">
@@ -143,7 +144,7 @@ const AIAvatarShowcase = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <button className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-12 py-4 rounded-xl font-bold text-lg hover:from-primary-glow hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
-            🤖 Start Chatting with ODIAAA
+            🤖 Start Chatting with Agent Odia
           </button>
         </div>
       </div>

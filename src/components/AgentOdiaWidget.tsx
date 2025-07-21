@@ -7,12 +7,12 @@ import ChatMessage from './ChatMessage';
 import { useChat } from '../hooks/useChat';
 import { Language } from '../types/language';
 
-interface OdiaaaWidgetProps {
+interface AgentOdiaWidgetProps {
   isEmbedded?: boolean;
   onClose?: () => void;
 }
 
-const OdiaaaWidget: React.FC<OdiaaaWidgetProps> = ({ isEmbedded = false, onClose }) => {
+const AgentOdiaWidget: React.FC<AgentOdiaWidgetProps> = ({ isEmbedded = false, onClose }) => {
   const [isMinimized, setIsMinimized] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<Language>({
@@ -65,7 +65,7 @@ const OdiaaaWidget: React.FC<OdiaaaWidgetProps> = ({ isEmbedded = false, onClose
         <button
           onClick={() => setIsOpen(true)}
           className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110"
-          aria-label="Open ODIAAA Assistant"
+          aria-label="Open Agent Odia Assistant"
         >
           <MessageCircle size={24} />
         </button>
@@ -79,10 +79,10 @@ const OdiaaaWidget: React.FC<OdiaaaWidgetProps> = ({ isEmbedded = false, onClose
       <div className="bg-[#128C7E] text-white p-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <span className="text-[#128C7E] font-bold text-sm">OA</span>
+            <span className="text-[#128C7E] font-bold text-sm">AO</span>
           </div>
           <div>
-            <h3 className="font-semibold">ODIAAA</h3>
+            <h3 className="font-semibold">Agent Odia</h3>
             <p className="text-xs opacity-90">AI Assistant for Africa</p>
           </div>
         </div>
@@ -126,7 +126,7 @@ const OdiaaaWidget: React.FC<OdiaaaWidgetProps> = ({ isEmbedded = false, onClose
                 <div className="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center mx-auto mb-4">
                   <MessageCircle size={24} className="text-white" />
                 </div>
-                <p className="text-lg font-medium mb-2">Welcome to ODIAAA!</p>
+                <p className="text-lg font-medium mb-2">Welcome to Agent Odia!</p>
                 <p className="text-sm">Your AI assistant for Africa. How can I help you today?</p>
               </div>
             )}
@@ -223,4 +223,4 @@ const OdiaaaWidget: React.FC<OdiaaaWidgetProps> = ({ isEmbedded = false, onClose
   );
 };
 
-export default OdiaaaWidget;
+export default AgentOdiaWidget;

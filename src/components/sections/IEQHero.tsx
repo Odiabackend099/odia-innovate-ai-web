@@ -102,7 +102,7 @@ const IEQHero = () => {
                   className="ieq-button-outline group"
                 >
                   <Play className="w-4 h-4 mr-2" />
-                  <span>Talk to ODIAAA</span>
+                  <span>Talk to Agent Odia</span>
                 </button>
               </div>
 

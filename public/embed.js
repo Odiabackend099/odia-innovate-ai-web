@@ -1,5 +1,5 @@
 
-// ODIAAA Widget Embed Script
+// Agent Odia Widget Embed Script
 // Usage: <script src="https://yourdomain.com/embed.js" data-position="bottom-right"></script>
 
 (function() {
@@ -9,7 +9,7 @@
     const scriptTag = document.currentScript || document.querySelector('script[src*="embed.js"]');
     
     if (!scriptTag) {
-        console.error('ODIAAA Widget: Could not find embed script tag');
+        console.error('Agent Odia Widget: Could not find embed script tag');
         return;
     }
     
@@ -30,7 +30,7 @@
     
     // Create widget container
     const container = document.createElement('div');
-    container.id = 'odiaaa-widget-container';
+    container.id = 'agent-odia-widget-container';
     container.style.cssText = `
         position: fixed;
         z-index: 9999;
@@ -68,7 +68,7 @@
         transition: all 0.3s ease;
     `;
     iframe.allow = 'microphone';
-    iframe.title = 'ODIAAA Voice Assistant';
+    iframe.title = 'Agent Odia Voice Assistant';
     
     // Handle mobile responsiveness
     function handleResize() {
@@ -129,7 +129,7 @@
         window.addEventListener('resize', handleResize);
         handleResize();
         
-        console.log('ODIAAA Widget loaded successfully');
+        console.log('Agent Odia Widget loaded successfully');
     }
     
     if (document.readyState === 'loading') {

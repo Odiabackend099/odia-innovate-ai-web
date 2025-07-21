@@ -6,7 +6,7 @@ import ChatWidget from '../components/ChatWidget';
 import ContactHero from '../components/contact/ContactHero';
 import ContactForm from '../components/contact/ContactForm';
 import ContactInfo from '../components/contact/ContactInfo';
-import OdiaaaWidget from '../components/OdiaaaWidget';
+import AgentOdiaWidget from '../components/AgentOdiaWidget';
 
 const Contact = () => {
   return (
@@ -54,14 +54,14 @@ const Contact = () => {
                 </button>
                 <button 
                   onClick={() => {
-                    const widgetButton = document.querySelector('[aria-label="Open ODIAAA Assistant"]') as HTMLButtonElement;
+                    const widgetButton = document.querySelector('[aria-label="Open Agent Odia Assistant"]') as HTMLButtonElement;
                     if (widgetButton) {
                       widgetButton.click();
                     }
                   }}
                   className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  🤖 Talk to ODIAAA
+                  🤖 Talk to Agent Odia
                 </button>
               </div>
             </div>
@@ -72,8 +72,8 @@ const Contact = () => {
       <Footer />
       <ChatWidget />
       
-      {/* Add ODIAAA Widget */}
-      <OdiaaaWidget />
+      {/* Add Agent Odia Widget */}
+      <AgentOdiaWidget />
     </div>
   );
 };

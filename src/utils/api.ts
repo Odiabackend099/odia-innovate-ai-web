@@ -1,7 +1,7 @@
 
 import { ApiRequest, ApiResponse } from '../types/api';
 
-const WEBHOOK_URL = 'https://n8n.yourdomain.com/webhook/odiaaa-agent';
+const WEBHOOK_URL = 'https://n8n.yourdomain.com/webhook/agent-odia';
 
 export async function sendMessage(request: ApiRequest): Promise<ApiResponse> {
   try {
@@ -48,28 +48,28 @@ export async function sendMessage(request: ApiRequest): Promise<ApiResponse> {
 function getDemoResponse(message: string, language: string): string {
   const responses = {
     en: [
-      "Hello! I'm ODIAAA, your AI assistant for Africa. How can I help you today?",
+      "Hello! I'm Agent Odia, your AI assistant for Africa. How can I help you today?",
       "That's interesting! Let me help you with that.",
       "I understand. Here's what I think about your question...",
       "Thank you for sharing that with me. I'm here to assist you.",
     ],
     pcm: [
-      "How far! I be ODIAAA, your AI assistant wey dey help Africans. Wetin I fit do for you?",
+      "How far! I be Agent Odia, your AI assistant wey dey help Africans. Wetin I fit do for you?",
       "Na true talk be that! Make I help you solve am.",
       "I understand wetin you talk. This na wetin I think...",
     ],
     yo: [
-      "Bawo! Mo n je ODIAAA, oluranlowo AI ti o wa fun awon ara Afrika. Bawo ni mo se le ran e lowo?",
+      "Bawo! Mo n je Agent Odia, oluranlowo AI ti o wa fun awon ara Afrika. Bawo ni mo se le ran e lowo?",
       "O dara! Je ki n ran e lowo pelu eyi.",
       "Mo ye mi. Eyi ni ohun ti mo ro nipa ibeere yin...",
     ],
     ig: [
-      "Ndewo! Abụ m ODIAAA, onye inyeaka AI maka ndị Africa. Kedu ka m ga-esi nyere gị aka?",
+      "Ndewo! Abụ m Agent Odia, onye inyeaka AI maka ndị Africa. Kedu ka m ga-esi nyere gị aka?",
       "Nke ahụ dị mma! Ka m nyere gị aka na nke ahụ.",
       "Aghọtara m. Nke a bụ ihe m chere banyere ajụjụ gị...",
     ],
     ha: [
-      "Sannu! Ni ne ODIAAA, mataimakinka na AI don Afirka. Yaya zan iya taimaka maka?",
+      "Sannu! Ni ne Agent Odia, mataimakinka na AI don Afirka. Yaya zan iya taimaka maka?",
       "Wannan yana da kyau! Bari in taimaka maka wannan.",
       "Na fahimta. Ga abin da nake tunani game da tambayar ku...",
     ],

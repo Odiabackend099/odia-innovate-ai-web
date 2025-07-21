@@ -14,7 +14,7 @@ const ChatWidget = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm ODIAAA, your AI assistant. How can I help you with AI solutions today?",
+      text: "Hello! I'm Agent Odia, your AI assistant. How can I help you with AI solutions today?",
       isBot: true,
       timestamp: new Date()
     }
@@ -170,7 +170,7 @@ const ChatWidget = () => {
                 <span className="font-bold">AI</span>
               </div>
               <div>
-                <h3 className="font-semibold">ODIAAA</h3>
+                <h3 className="font-semibold">Agent Odia</h3>
                 <p className="text-sm opacity-90">AI Assistant</p>
               </div>
             </div>
