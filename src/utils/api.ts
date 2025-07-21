@@ -1,7 +1,7 @@
 
 import { ApiRequest, ApiResponse } from '../types/api';
 
-const WEBHOOK_URL = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL || 'https://n8n.yourdomain.com/webhook/odiaaa-agent';
+const WEBHOOK_URL = 'https://n8n.yourdomain.com/webhook/odiaaa-agent';
 
 export async function sendMessage(request: ApiRequest): Promise<ApiResponse> {
   try {
