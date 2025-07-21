@@ -6,6 +6,7 @@ import AgentSelection from '../components/voice/AgentSelection';
 import VoiceInterface from '../components/voice/VoiceInterface';
 import FloatingAgentAvatars from '../components/voice/FloatingAgentAvatars';
 import PWAInstallPrompt from '../components/PWAInstallPrompt';
+import Header from '../components/layout/Header';
 
 interface Agent {
   id: string;
@@ -39,30 +40,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="bg-primary/95 backdrop-blur-sm border-b border-primary/20 fixed w-full z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center gap-3">
-              <img
-                src="/lovable-uploads/e4ecf514-3800-415c-b885-be4fdded4cc7.png"
-                alt="ODIA Logo"
-                className="h-12 w-auto"
-              />
-              <div>
-                <h1 className="text-xl font-bold text-white">ODIA Voice AI</h1>
-                <p className="text-sm text-white/80">Nigerian Business Intelligence</p>
-              </div>
-            </div>
-            <div className="text-sm text-white/80">
-              Nigeria's Premier Voice Platform 🇳🇬
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Hero Section */}
-      <main className="pt-16">
+      <main className="pt-20">
         <section className="bg-gradient-to-br from-primary via-primary-glow to-accent min-h-screen flex items-center justify-center relative overflow-hidden">
           {/* Animated Background Pattern */}
           <div className="absolute inset-0">

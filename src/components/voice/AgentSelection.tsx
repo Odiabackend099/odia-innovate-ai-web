@@ -23,7 +23,7 @@ const agents: Agent[] = [
     name: 'Lexi',
     role: 'Customer Service Specialist',
     specialization: 'Nigerian customer support, order management, service inquiries',
-    avatar: '/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png', // Using existing placeholder
+    avatar: '/lovable-uploads/4222c5b0-b3da-4018-8080-8db10c3d83fa.png',
     icon: <UserCheck className="w-6 h-6" />,
     color: 'from-accent to-accent/80'
   },
@@ -32,7 +32,7 @@ const agents: Agent[] = [
     name: 'Atlas',
     role: 'Financial Intelligence Expert',
     specialization: 'Nigerian financial markets, CBN regulations, business intelligence',
-    avatar: '/lovable-uploads/99c152aa-1d3c-4930-b657-e7b6c4797733.png', // Using existing placeholder
+    avatar: '/lovable-uploads/38199649-62b5-4148-94b2-b06cb180b080.png',
     icon: <TrendingUp className="w-6 h-6" />,
     color: 'from-primary to-primary-glow'
   }
