@@ -5,10 +5,10 @@ const Stats = () => {
   const [scrollY, setScrollY] = useState(0);
   
   const stats = [
-    { number: '50+', label: 'AI Solutions Deployed', icon: '🚀' },
-    { number: '15+', label: 'African Languages', icon: '🌍' },
-    { number: '98%', label: 'Client Satisfaction', icon: '⭐' },
-    { number: '24/7', label: 'Support Available', icon: '💬' },
+    { number: '500+', label: 'Businesses Onboarded via Lexi', icon: '🎯' },
+    { number: '15,000+', label: 'Student Queries by MISS', icon: '🎓' },
+    { number: '₦75M+', label: 'Processed via Flutterwave', icon: '💰' },
+    { number: '48hrs', label: 'Agent Deployment Time', icon: '⚡' },
   ];
 
   useEffect(() => {
@@ -45,11 +45,11 @@ const Stats = () => {
               className="w-12 h-12 mr-3"
             />
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              Trusted Across Africa
+              Nigerian Business Automation
             </h2>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our AI solutions are making a real impact for companies from Lagos to Nairobi
+            Our voice AI infrastructure is transforming Nigerian businesses with real automation results
           </p>
         </div>
 

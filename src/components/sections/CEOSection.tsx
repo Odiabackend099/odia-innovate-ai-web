@@ -38,19 +38,20 @@ const CEOSection = () => {
           <div className="text-center lg:text-left">
             <div className="mb-8">
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent mb-6">
-                Leading Africa's AI Revolution
+                Building Nigeria's AI Operating System
               </h2>
               <div className="bg-gradient-to-br from-card/80 to-surface/80 backdrop-blur-sm rounded-2xl p-8 border border-border shadow-lg">
                 <blockquote className="text-xl text-card-foreground leading-relaxed mb-6 italic">
-                  "At ODIA.dev, we're not just building AI solutions – we're crafting the future of African innovation. 
-                  Every line of code, every conversation our AI has, brings us closer to a continent where 
-                  technology serves humanity, understands our languages, and respects our cultures."
+                  "We're not just building AI - we're building Nigeria's voice AI operating system. 
+                  Every WhatsApp message processed by Lexi, every university query handled by MISS, 
+                  every luxury booking confirmed by Atlas brings us closer to automating 1,000 
+                  Nigerian businesses in 30 days. Nigeria no dey wait. We execute."
                 </blockquote>
                 <div className="flex items-center justify-center lg:justify-start">
                   <div>
-                    <div className="font-bold text-lg text-primary">Austyn</div>
-                    <div className="text-muted-foreground">CEO & Founder, ODIA.dev</div>
-                    <div className="text-sm text-muted-foreground mt-1">🇳🇬 Lagos, Nigeria</div>
+                    <div className="font-bold text-lg text-primary">Austyn EGUAELE</div>
+                    <div className="text-muted-foreground">CEO, ODIA AI LTD</div>
+                    <div className="text-sm text-muted-foreground mt-1">🇳🇬 Abuja, Nigeria | 🚀 Building Legacy Through Voice AI</div>
                   </div>
                 </div>
               </div>

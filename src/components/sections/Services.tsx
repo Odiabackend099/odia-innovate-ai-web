@@ -10,54 +10,54 @@ const Services = () => {
     {
       id: 'voice-automation',
       icon: <Mic className="w-6 h-6" />,
-      title: 'Voice Automation',
-      description: 'Transform customer service with intelligent voice systems that understand multiple African languages and dialects.',
-      features: ['Multi-language support', 'Natural conversation', '24/7 availability'],
+      title: '🎙️ Voice AI Infrastructure',
+      description: 'Deploy intelligent voice agents that understand Nigerian accents, speak local languages, and integrate directly with your business systems via our MCP platform.',
+      features: ['Nigerian English + Pidgin recognition', 'Yoruba, Igbo, Hausa support', 'Live Deployment: 48 hours'],
       color: 'text-blue-600',
       bgColor: 'bg-blue-50'
     },
     {
-      id: 'intelligent-chatbots',
+      id: 'whatsapp-automation',
       icon: <MessageSquare className="w-6 h-6" />,
-      title: 'Intelligent Chatbots',
-      description: 'Deploy smart chatbots that understand context, culture, and local business practices across Africa.',
-      features: ['Cultural awareness', 'Context understanding', 'Business integration'],
+      title: '📱 Agent Lexi - WhatsApp Business Expert',
+      description: 'Agent Lexi handles your entire customer journey - from first contact to payment confirmation via Flutterwave integration.',
+      features: ['WhatsApp Business integration', 'Flutterwave payment automation', '99.9% Uptime Guaranteed'],
       color: 'text-green-600',
       bgColor: 'bg-green-50'
     },
     {
-      id: 'african-language-nlp',
+      id: 'university-support',
       icon: <Bot className="w-6 h-6" />,
-      title: 'African Language NLP',
-      description: 'Advanced natural language processing specifically trained on African languages and cultural contexts.',
-      features: ['Yoruba, Hausa, Swahili', 'Cultural context', 'Dialect recognition'],
+      title: '📚 Agent MISS - University Academic Assistant',
+      description: 'Agent MISS provides multilingual academic support for universities across Nigeria, with deep integration into academic systems.',
+      features: ['Multilingual student support', 'University data integration', '24/7 Academic Support'],
       color: 'text-orange-600',
       bgColor: 'bg-orange-50'
     },
     {
-      id: 'healthcare-ai',
+      id: 'luxury-travel',
       icon: <Stethoscope className="w-6 h-6" />,
-      title: 'Healthcare AI',
-      description: 'Specialized AI solutions for African healthcare challenges, from diagnosis assistance to patient management.',
-      features: ['Diagnosis support', 'Patient management', 'Multilingual health'],
+      title: '✈️ Agent Atlas - Luxury & Travel Concierge',
+      description: 'Agent Atlas handles high-end bookings, VIP inquiries, and premium customer experiences with sophisticated automation.',
+      features: ['Luxury travel bookings', 'VIP client management', 'White-Glove Service'],
       color: 'text-purple-600',
       bgColor: 'bg-purple-50'
     },
     {
-      id: 'government-ai',
+      id: 'legal-documents',
       icon: <Building className="w-6 h-6" />,
-      title: 'Government AI',
-      description: 'Streamline public services with AI solutions designed for African government and civic applications.',
-      features: ['Public service automation', 'Citizen engagement', 'Multilingual support'],
+      title: '⚖️ Agent Miss Legal - Legal Document Expert',
+      description: 'Legal documents and contract templates with NDPR compliance automation for Nigerian businesses.',
+      features: ['Legal documents & contracts', 'NDPR compliance automation', 'Nigerian Legal Compliance'],
       color: 'text-indigo-600',
       bgColor: 'bg-indigo-50'
     },
     {
-      id: 'custom-solutions',
+      id: 'emergency-response',
       icon: <Zap className="w-6 h-6" />,
-      title: 'Custom Solutions',
-      description: 'Tailored AI solutions for unique African business challenges and opportunities.',
-      features: ['Custom development', 'Local integration', 'Scalable solutions'],
+      title: '🆘 Protect.NG (CrossAI) - Coming Q2 2025',
+      description: 'Multilingual Emergency Response System with voice-activated emergency assistance and government agency integration.',
+      features: ['Multi-language emergency support', 'Real-time location services', 'Launching Nationwide 2025'],
       color: 'text-yellow-600',
       bgColor: 'bg-yellow-50'
     }
@@ -76,11 +76,11 @@ const Services = () => {
       <div className="webflow-container">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold webflow-text-gradient mb-6">
-            AI Solutions Across Africa
+            Meet Our AI Agent Squad
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            From Lagos to Cairo, Nairobi to Cape Town - we're building AI solutions 
-            that understand Africa's unique challenges and opportunities.
+            From WhatsApp onboarding to university support - our voice-first agents speak Nigerian languages 
+            and understand our business culture. Deploy in 48 hours.
           </p>
         </div>
 
@@ -128,7 +128,7 @@ const Services = () => {
             onClick={handleStartJourney}
             className="webflow-button-primary px-12 py-4 text-lg shadow-xl hover:shadow-2xl"
           >
-            Start Your AI Journey Today
+            🎙️ Deploy Your Voice Agent (48 Hours)
           </button>
         </div>
       </div>
