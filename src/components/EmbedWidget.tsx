@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import OdiaaaWidget from './OdiaaaWidget';
+import AgentOdiaWidget from './AgentOdiaWidget';
 
 interface EmbedWidgetProps {
   config?: {
@@ -99,7 +99,7 @@ const EmbedWidget: React.FC<EmbedWidgetProps> = ({ config = {} }) => {
         ...customStyles,
       }}
     >
-      <OdiaaaWidget isEmbedded={true} />
+      <AgentOdiaWidget isEmbedded={true} />
       
       {/* Custom CSS for theming */}
       <style dangerouslySetInnerHTML={{ __html: customCSS }} />
