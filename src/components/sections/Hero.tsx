@@ -11,7 +11,7 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   const [isVoiceChatOpen, setIsVoiceChatOpen] = useState(false);
-  const fullText = 'Voice AI Infrastructure for Nigeria';
+  const fullText = 'AI Solutions for African Innovation';
 
   useEffect(() => {
     if (currentIndex < fullText.length) {

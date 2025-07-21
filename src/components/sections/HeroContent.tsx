@@ -34,7 +34,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
             ODIA.dev
           </h1>
           <p className="text-sm text-muted-foreground font-medium">
-            Nigeria's First Voice-Based AI Infrastructure Company
+            AI Solutions for Africa
           </p>
         </div>
       </div>
@@ -47,8 +47,8 @@ const HeroContent: React.FC<HeroContentProps> = ({
       </h1>
       
       <p className="text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-        Building legacy through voice AI infrastructure. From WhatsApp onboarding to university support, 
-        we deploy intelligent agents that speak Nigerian languages and understand our business culture.
+        Empowering African businesses with cutting-edge artificial intelligence. 
+        From Lagos to Nairobi, we bring innovation to every corner of the continent.
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
@@ -56,28 +56,28 @@ const HeroContent: React.FC<HeroContentProps> = ({
           onClick={onTalkToAI}
           className="webflow-button-primary group px-8 py-4 text-lg shadow-xl hover:shadow-2xl"
         >
-          🎙️ Deploy Voice Agent Now
+          Talk to Our AI
         </button>
         <button 
           onClick={onExploreServices}
           className="webflow-button-outline px-8 py-4 text-lg"
         >
-          🤖 Meet Our AI Agents
+          View Services
         </button>
       </div>
 
       <div className="flex items-center justify-center lg:justify-start space-x-8 text-sm text-muted-foreground">
         <div className="flex items-center">
           <div className="w-2 h-2 bg-success rounded-full mr-2"></div>
-          ⚡ Live in 48 Hours
+          Available 24/7
         </div>
         <div className="flex items-center">
           <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-          🇳🇬 Nigerian-Built Technology
+          15+ African Languages
         </div>
         <div className="flex items-center">
           <div className="w-2 h-2 bg-warning rounded-full mr-2"></div>
-          🎙️ Voice AI Infrastructure
+          Nigeria-Based
         </div>
       </div>
     </div>
