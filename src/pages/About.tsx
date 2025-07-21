@@ -10,19 +10,19 @@ const About = () => {
       name: 'Dr. Amina Kone',
       role: 'CEO & Founder',
       bio: 'AI researcher with 15+ years experience. Former Google AI team member.',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face'
+      image: '/lovable-uploads/a6898fbe-7d74-4180-955a-9fd88a12a27c.png'
     },
     {
       name: 'Kwame Asante',
       role: 'CTO',
       bio: 'ML engineer specializing in African language processing and NLP.',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face'
+      image: '/lovable-uploads/c158171e-b9d7-401b-bc19-a2cd316227a5.png'
     },
     {
       name: 'Fatima Okonkwo',
       role: 'Head of Products',
       bio: 'Product strategist focused on AI solutions for African markets.',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face'
+      image: '/lovable-uploads/f7d1e5e1-2175-4874-a21f-28dc1af09b34.png'
     }
   ];
 
