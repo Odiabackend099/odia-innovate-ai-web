@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ArrowRight, MessageCircle } from 'lucide-react';
 
 const CallToAction = () => {
   const navigate = useNavigate();
@@ -9,19 +11,17 @@ const CallToAction = () => {
   };
 
   const handleTalkToAI = () => {
-    // This would trigger the voice chat interface
-    // For now, navigate to contact as fallback
     navigate('/contact');
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary to-primary-glow relative overflow-hidden">
+    <section className="ieq-section bg-primary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div 
           className="w-full h-full"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Ccircle cx='60' cy='60' r='8'/%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='90' cy='90' r='6'/%3E%3Ccircle cx='30' cy='90' r='5'/%3E%3Ccircle cx='90' cy='30' r='7'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Ccircle cx='60' cy='60' r='8'/%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3Ccircle cx='90' cy='90' r='6'/%3E%3Ccircle cx='30' cy='90' r='5'/%3E%3Ccircle cx='90' cy='30' r='7'/%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
       </div>
@@ -33,13 +33,13 @@ const CallToAction = () => {
         <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-white/20 rounded-full animate-pulse delay-700"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 ieq-container text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6">
-            Ready to Transform Africa with AI? 🚀
+          <h2 className="ieq-heading-lg text-white mb-6">
+            Ready to Transform Your Business?
           </h2>
           
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 leading-relaxed">
+          <p className="ieq-body-lg text-white/90 mb-12 leading-relaxed">
             Join thousands of African businesses already using ODIAAA to revolutionize 
             their customer service, streamline operations, and unlock new opportunities across the continent.
           </p>
@@ -47,25 +47,23 @@ const CallToAction = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
             <button 
               onClick={handleGetStarted}
-              className="group bg-white text-primary px-12 py-5 rounded-xl font-bold text-lg hover:bg-surface transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl"
+              className="group bg-white text-primary px-12 py-4 rounded-md font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center"
             >
-              <span className="group-hover:scale-105 transition-transform duration-300 inline-block">
-                🌟 Get Started Today
-              </span>
+              <span>Get Started Today</span>
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
             </button>
             
             <button 
               onClick={handleTalkToAI}
-              className="group border-2 border-white text-primary-foreground px-12 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+              className="group border-2 border-white text-white px-12 py-4 rounded-md font-semibold text-lg hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center"
             >
-              <span className="group-hover:scale-105 transition-transform duration-300 inline-block">
-                🤖 Talk to ODIAAA Now
-              </span>
+              <MessageCircle className="w-5 h-5 mr-2" />
+              <span>Talk to ODIAAA</span>
             </button>
           </div>
 
           {/* Stats Row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-primary-foreground/90">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-white/90">
             <div className="group hover:scale-105 transition-transform duration-300">
               <div className="text-3xl md:text-4xl font-bold mb-2">50+</div>
               <div className="text-sm md:text-base">Projects Delivered</div>
@@ -86,7 +84,7 @@ const CallToAction = () => {
 
           {/* Bottom Message */}
           <div className="mt-16">
-            <p className="text-lg text-primary-foreground/80 mb-4">
+            <p className="text-lg text-white/80 mb-4">
               🌍 Serving businesses from Lagos to Cairo, Nairobi to Cape Town
             </p>
             <div className="flex justify-center space-x-2 text-2xl">
