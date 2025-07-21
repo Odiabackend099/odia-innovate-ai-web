@@ -8,9 +8,17 @@ interface Message {
   content: string;
   timestamp: Date;
   isVoice?: boolean;
+  agent?: string;
 }
 
-export const useVoiceChat = (isOpen: boolean) => {
+interface Agent {
+  id: string;
+  name: string;
+  role: string;
+  specialization: string;
+}
+
+export const useVoiceChat = (isOpen: boolean, agent?: Agent) => {
   const { toast } = useToast();
   const [messages, setMessages] = useState<Message[]>([]);
   const [isRecording, setIsRecording] = useState(false);
@@ -25,21 +33,31 @@ export const useVoiceChat = (isOpen: boolean) => {
   const analyserRef = useRef<AnalyserNode | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
 
-  // Initialize welcome message
+  // Initialize welcome message based on agent
   useEffect(() => {
-    if (isOpen && messages.length === 0) {
+    if (isOpen && messages.length === 0 && agent) {
+      const getWelcomeMessage = (agentName: string, role: string) => {
+        if (agentName === 'Lexi') {
+          return `Hello! I'm Lexi, your Nigerian Customer Service Specialist. I'm here to help with customer support, order management, and service inquiries. I speak English, Pidgin, and understand Nigerian business culture. How can I assist you today? 🇳🇬`;
+        } else if (agentName === 'Atlas') {
+          return `Good day! I'm Atlas, your Financial Intelligence Expert for Nigeria. I specialize in Nigerian financial markets, CBN regulations, and business intelligence. I can help with financial insights, market analysis, and regulatory guidance. Wetin you wan know about? 🇳🇬💰`;
+        }
+        return `Hello! I'm ${agentName}, your ${role}. I understand Nigerian English, Pidgin, and local business contexts. How can I help you today? 🇳🇬`;
+      };
+
       const welcomeMessage: Message = {
         id: 'welcome',
         type: 'ai',
-        content: "Hello! I'm ODIAAA, your AI assistant for Africa. I can help you with our AI solutions, pricing, demos, and more. You can speak to me or type your questions. How can I assist you today? 🇳🇬",
+        content: getWelcomeMessage(agent.name, agent.role),
         timestamp: new Date(),
+        agent: agent.id,
       };
       setMessages([welcomeMessage]);
       
       // Speak welcome message
       speakText(welcomeMessage.content);
     }
-  }, [isOpen]);
+  }, [isOpen, agent]);
 
   const startVoiceChat = async () => {
     try {
@@ -69,8 +87,8 @@ export const useVoiceChat = (isOpen: boolean) => {
       setIsListening(true);
       
       toast({
-        title: "Voice Chat Connected! 🎤",
-        description: "I'm listening. Start speaking to me in English or any African language.",
+        title: `Connected to ${agent?.name || 'AI Agent'}! 🎤`,
+        description: "I'm listening. Speak in English, Pidgin, or any Nigerian language.",
       });
       
     } catch (error) {
@@ -164,6 +182,7 @@ export const useVoiceChat = (isOpen: boolean) => {
             content: transcript,
             timestamp: new Date(),
             isVoice: true,
+            agent: agent?.id,
           };
           
           setMessages(prev => [...prev, userMessage]);
@@ -185,19 +204,31 @@ export const useVoiceChat = (isOpen: boolean) => {
   };
 
   const convertSpeechToText = async (audioBase64: string): Promise<string> => {
-    // Simulate speech-to-text with demo responses
-    const demoResponses = [
-      "What services do you offer?",
-      "Can you tell me about your pricing?",
-      "I need help with AI solutions for my business",
-      "Do you support Nigerian languages?",
-      "How can I schedule a demo?",
-      "What makes your AI solutions unique for Africa?",
-      "Can you help with healthcare AI?",
-      "I'm interested in voice automation",
+    // Nigerian-context demo responses based on agent
+    const lexiResponses = [
+      "I need help with customer support",
+      "How can I track my order?",
+      "What are your business hours?",
+      "I want to make a complaint",
+      "Can you help me with my account?",
+      "What payment methods do you accept?",
+      "How far with my delivery?",
+      "I need customer service in Yoruba",
     ];
-    
-    return demoResponses[Math.floor(Math.random() * demoResponses.length)];
+
+    const atlasResponses = [
+      "What's the current USD to Naira rate?",
+      "Tell me about CBN policies",
+      "How is the Nigerian stock market performing?",
+      "I need financial analysis for my business",
+      "What are the banking regulations in Nigeria?",
+      "Help me understand investment opportunities",
+      "How can I secure business funding?",
+      "What about cryptocurrency regulations in Nigeria?",
+    ];
+
+    const responses = agent?.id === 'lexi' ? lexiResponses : atlasResponses;
+    return responses[Math.floor(Math.random() * responses.length)];
   };
 
   const generateAIResponse = async (userInput: string) => {
@@ -217,6 +248,7 @@ export const useVoiceChat = (isOpen: boolean) => {
       type: 'ai',
       content: response,
       timestamp: new Date(),
+      agent: agent?.id,
     };
     
     setMessages(prev => [...prev, aiMessage]);
@@ -230,8 +262,16 @@ export const useVoiceChat = (isOpen: boolean) => {
   const getAIResponse = (input: string): string => {
     const lowerInput = input.toLowerCase();
     
+    // Agent-specific responses
+    if (agent?.id === 'lexi') {
+      return getLexiResponse(lowerInput);
+    } else if (agent?.id === 'atlas') {
+      return getAtlasResponse(lowerInput);
+    }
+    
+    // Default responses
     if (lowerInput.includes('service') || lowerInput.includes('what do you do')) {
-      return "We offer 6 main AI solutions tailored for Africa: 🇳🇬 Voice Automation for call centers with multi-language support, 🇰🇪 Intelligent Chatbots for WhatsApp and web, 🇬🇭 African Language NLP for Yoruba, Hausa, Swahili and more, 🇿🇦 Healthcare AI for patient management, 🇪🇹 Government AI for citizen services, and 🇷🇼 Custom Solutions. Which one interests you most?";
+      return "We offer AI solutions tailored for Nigerian businesses. Would you like to speak with Lexi for customer service or Atlas for financial intelligence?";
     }
     
     if (lowerInput.includes('price') || lowerInput.includes('cost') || lowerInput.includes('pricing')) {
@@ -262,7 +302,55 @@ export const useVoiceChat = (isOpen: boolean) => {
       return "Our Voice Automation is perfect for African businesses! 📞 It handles customer calls in multiple languages, understands accents and dialects, provides 24/7 support, integrates with existing systems, and reduces costs by up to 70%. Perfect for banks, telcos, and customer service centers. We support English, Pidgin, Yoruba, Hausa, Swahili, and more!";
     }
     
-    return "That's a great question! I'm here to help you understand how ODIA.dev can transform your business with AI solutions built specifically for Africa. You can ask me about our services, pricing, demos, African language support, or anything else. What would you like to know more about? 🚀";
+    return "That's a great question! I'm here to help you with Nigerian business needs. Feel free to ask me anything. Wetin you wan know? 🚀";
+  };
+
+  const getLexiResponse = (input: string): string => {
+    if (input.includes('order') || input.includes('delivery') || input.includes('track')) {
+      return "I can help you track your order! For Nigerian deliveries, we work with local logistics partners. Orders within Lagos usually take 1-2 days, while other states take 2-5 days. Give me your order number and I'll check the status for you. How far with your delivery? 📦";
+    }
+    
+    if (input.includes('payment') || input.includes('pay') || input.includes('money')) {
+      return "We accept multiple payment methods for Nigerian customers: Bank transfer, Flutterwave, Paystack, USSD codes, and cash on delivery in major cities. You can pay in Naira or USD. Which payment method you wan use? 💳";
+    }
+    
+    if (input.includes('complaint') || input.includes('problem') || input.includes('issue')) {
+      return "I'm sorry to hear you're having issues! As your customer service specialist, I'm here to help resolve any problems quickly. Please tell me what's happening, and I'll make sure we sort it out. No wahala, we go fix am! 🤝";
+    }
+    
+    if (input.includes('hours') || input.includes('time') || input.includes('open')) {
+      return "Our customer service is available 24/7 through this voice platform! Our physical offices in Lagos, Abuja, and Port Harcourt operate Monday to Friday, 8 AM to 6 PM WAT. You can always talk to me anytime. When you need help? ⏰";
+    }
+    
+    if (input.includes('yoruba') || input.includes('hausa') || input.includes('igbo') || input.includes('pidgin')) {
+      return "Yes oh! I understand and can respond in Nigerian languages including Pidgin, and I'm learning Yoruba, Hausa, and Igbo. Feel free to mix languages when you talk - I understand the Nigerian way of speaking. Wetin language you prefer? 🗣️";
+    }
+    
+    return "As your customer service specialist, I'm here to help with orders, payments, complaints, account issues, and any other customer needs. I understand Nigerian business culture and can assist in English or Pidgin. Wetin you need help with today? 😊";
+  };
+
+  const getAtlasResponse = (input: string): string => {
+    if (input.includes('rate') || input.includes('dollar') || input.includes('naira') || input.includes('exchange')) {
+      return "Current USD/NGN rate is around ₦460-480 per dollar on the parallel market, while CBN official rate is about ₦460. Rates change daily based on forex availability and CBN policies. I recommend checking with authorized dealers for current rates. You need forex for business transactions? 💱";
+    }
+    
+    if (input.includes('cbn') || input.includes('central bank') || input.includes('policy') || input.includes('regulation')) {
+      return "The CBN has been implementing several policies to stabilize the Naira and improve forex liquidity. Recent changes include RT200 program, diaspora remittance incentives, and new banking regulations. Which specific CBN policy you want to understand? 🏛️";
+    }
+    
+    if (input.includes('investment') || input.includes('stock') || input.includes('market') || input.includes('nse')) {
+      return "The Nigerian stock market (NGX) has shown resilience with banking and consumer goods sectors performing well. Key indices include NGX ASI and NGX-30. For business investments, consider sectors like fintech, agriculture, and renewable energy. Which investment area interests you? 📈";
+    }
+    
+    if (input.includes('funding') || input.includes('loan') || input.includes('capital') || input.includes('credit')) {
+      return "There are several funding options for Nigerian businesses: Bank of Industry (BOI) loans, commercial bank facilities, CBN intervention funds, angel investors, and fintech lending. Interest rates range from 5-25% depending on the scheme. What type of business funding you dey look for? 💰";
+    }
+    
+    if (input.includes('crypto') || input.includes('bitcoin') || input.includes('digital currency')) {
+      return "CBN has restrictions on crypto transactions through banks, but digital assets trading still happens through P2P platforms. SEC Nigeria is developing regulations for digital assets. Many Nigerians use crypto for remittances and investments. You want know about legal crypto options? ₿";
+    }
+    
+    return "As your financial intelligence expert, I provide insights on Nigerian markets, CBN regulations, investment opportunities, business funding, and financial analysis. I understand the local financial landscape and regulatory environment. Which financial matter you want discuss? 💼";
   };
 
   const speakText = async (text: string) => {

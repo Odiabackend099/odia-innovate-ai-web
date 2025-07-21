@@ -7,27 +7,27 @@
 
 @layer base {
   :root {
-    /* Dark theme as primary */
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* ODIA Voice AI - Nigerian Business Theme */
+    --background: 244 6% 97.1%; /* Light background #F4F6F9 */
+    --foreground: 211 39% 23.5%; /* Text primary #2D3748 */
 
-    --card: 217.2 32.6% 17.5%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%; /* White surfaces */
+    --card-foreground: 211 39% 23.5%;
 
-    --popover: 217.2 32.6% 17.5%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 211 39% 23.5%;
 
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 84% 4.9%;
+    --primary: 210 100% 21%; /* ODIA primary #0A3D62 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 25%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 211 27% 54%; /* Text secondary #718096 */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 25%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 244 6% 97.1%;
+    --muted-foreground: 211 27% 54%;
 
-    --accent: 217.2 91.2% 59.8%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --accent: 204 100% 50%; /* ODIA accent #00A8FF */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -38,24 +38,24 @@
 
     --radius: 0.5rem;
 
-/* Enhanced colors for dark theme */
-    --primary-glow: 217.2 91.2% 70%;
-    --primary-soft: 217.2 50% 40%;
-    --surface: 217.2 32.6% 20%;
-    --surface-elevated: 217.2 32.6% 25%;
+/* ODIA Voice AI enhanced colors */
+    --primary-glow: 210 100% 31%; /* Lighter primary */
+    --primary-soft: 210 100% 41%; /* Softer primary */
+    --surface: 0 0% 100%; /* White surfaces */
+    --surface-elevated: 244 6% 97.1%; /* Elevated surfaces */
     
-    /* Webflow-inspired enhancements */
-    --success: 142.1 76.2% 36.3%;
-    --success-foreground: 210 40% 98%;
-    --warning: 47.9 95.8% 53.1%;
-    --warning-foreground: 222.2 84% 4.9%;
-    --info: 217.2 91.2% 59.8%;
-    --info-foreground: 222.2 84% 4.9%;
+    /* Nigerian business colors */
+    --success: 142.1 76.2% 36.3%; /* Green success */
+    --success-foreground: 0 0% 100%;
+    --warning: 47.9 95.8% 53.1%; /* Warning yellow */
+    --warning-foreground: 210 100% 21%;
+    --info: 204 100% 50%; /* Info blue (accent) */
+    --info-foreground: 0 0% 100%;
     
-    /* Professional gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217.2 91.2% 59.8%), hsl(217.2 91.2% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(217.2 32.6% 25%), hsl(217.2 32.6% 35%));
-    --gradient-accent: linear-gradient(135deg, hsl(142.1 76.2% 36.3%), hsl(142.1 76.2% 46.3%));
+    /* Nigerian-inspired gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 21%), hsl(204 100% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(244 6% 97.1%), hsl(0 0% 100%));
+    --gradient-accent: linear-gradient(135deg, hsl(204 100% 50%), hsl(204 100% 60%));
     
     /* Professional shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -74,28 +74,28 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .light {
-    /* Light theme as secondary */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+  .dark {
+    /* Dark theme for evening usage */
+    --background: 210 100% 4%; /* Dark navy */
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 210 100% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 100% 8%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 204 100% 50%; /* Keep accent as primary in dark */
+    --primary-foreground: 210 100% 4%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 20% 25%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 25%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 204 100% 60%; /* Brighter accent for dark */
+    --accent-foreground: 210 100% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -208,6 +208,74 @@
     animation: pulse-glow 2s ease-in-out infinite;
   }
 
+  /* Voice-specific animations */
+  @keyframes wave {
+    0%, 40%, 100% { transform: scaleY(0.4); }
+    20% { transform: scaleY(1.0); }
+  }
+
+  @keyframes wave-alt {
+    0%, 60%, 100% { transform: scaleY(0.4); }
+    30% { transform: scaleY(1.0); }
+  }
+
+  @keyframes listening-pulse {
+    0%, 100% { 
+      transform: scale(1);
+      background: hsl(var(--accent) / 0.1);
+    }
+    50% { 
+      transform: scale(1.05);
+      background: hsl(var(--accent) / 0.2);
+    }
+  }
+
+  @keyframes speaking-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.6);
+    }
+  }
+
+  .wave-animation {
+    animation: wave 1.5s ease-in-out infinite;
+  }
+
+  .wave-animation:nth-child(2) {
+    animation: wave-alt 1.5s ease-in-out infinite;
+  }
+
+  .wave-animation:nth-child(3) {
+    animation: wave 1.5s ease-in-out infinite 0.1s;
+  }
+
+  .wave-animation:nth-child(4) {
+    animation: wave-alt 1.5s ease-in-out infinite 0.2s;
+  }
+
+  .wave-animation:nth-child(5) {
+    animation: wave 1.5s ease-in-out infinite 0.3s;
+  }
+
+  .listening-pulse {
+    animation: listening-pulse 2s ease-in-out infinite;
+  }
+
+  .speaking-glow {
+    animation: speaking-glow 1.5s ease-in-out infinite;
+  }
+
+  /* Nigerian flag colors for accents */
+  .nigeria-green {
+    background: linear-gradient(135deg, #008751, #00a65a);
+  }
+
+  .nigeria-white {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  }
+
   /* Gradient text animation */
   @keyframes gradient-shift {
     0% { background-position: 0% 50%; }
@@ -216,7 +284,7 @@
   }
 
   .gradient-animated {
-    background: linear-gradient(-45deg, #2563eb, #3b82f6, #1d4ed8, #1e40af);
+    background: linear-gradient(-45deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary-glow)), hsl(var(--accent)));
     background-size: 400% 400%;
     animation: gradient-shift 4s ease infinite;
     -webkit-background-clip: text;
