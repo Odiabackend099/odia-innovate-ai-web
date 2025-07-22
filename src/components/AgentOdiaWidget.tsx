@@ -1,9 +1,10 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Minimize2, Maximize2 } from 'lucide-react';
+import { MessageCircle, X, Minimize2, Maximize2, Mic } from 'lucide-react';
 import VoiceRecorder from './VoiceRecorder';
 import LanguageSelector from './LanguageSelector';
 import ChatMessage from './ChatMessage';
+import VoiceChatInterface from './VoiceChat/VoiceChatInterface';
 import { useChat } from '../hooks/useChat';
 import { Language } from '../types/language';
 
@@ -15,6 +16,7 @@ interface AgentOdiaWidgetProps {
 const AgentOdiaWidget: React.FC<AgentOdiaWidgetProps> = ({ isEmbedded = false, onClose }) => {
   const [isMinimized, setIsMinimized] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isVoiceChatOpen, setIsVoiceChatOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<Language>({
     code: 'en',
     name: 'English',
@@ -93,6 +95,15 @@ const AgentOdiaWidget: React.FC<AgentOdiaWidgetProps> = ({ isEmbedded = false, o
             onLanguageChange={setSelectedLanguage}
           />
           
+          <button
+            onClick={() => setIsVoiceChatOpen(true)}
+            className="p-2 hover:bg-white/20 rounded-full transition-colors"
+            aria-label="Open Voice Chat"
+            title="Professional Voice Chat"
+          >
+            <Mic size={16} />
+          </button>
+          
           {!isEmbedded && (
             <>
               <button
@@ -127,7 +138,14 @@ const AgentOdiaWidget: React.FC<AgentOdiaWidgetProps> = ({ isEmbedded = false, o
                   <MessageCircle size={24} className="text-white" />
                 </div>
                 <p className="text-lg font-medium mb-2">Welcome to Agent Odia!</p>
-                <p className="text-sm">Your AI assistant for Africa. How can I help you today?</p>
+                <p className="text-sm mb-4">Your AI assistant for Africa. How can I help you today?</p>
+                <button
+                  onClick={() => setIsVoiceChatOpen(true)}
+                  className="bg-[#25D366] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#128C7E] transition-colors flex items-center space-x-2 mx-auto"
+                >
+                  <Mic size={16} />
+                  <span>Try Voice Chat</span>
+                </button>
               </div>
             )}
             
@@ -173,6 +191,13 @@ const AgentOdiaWidget: React.FC<AgentOdiaWidgetProps> = ({ isEmbedded = false, o
               >
                 Voice
               </button>
+              <button
+                onClick={() => setIsVoiceChatOpen(true)}
+                className="px-3 py-1 rounded-full text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 transition-colors flex items-center space-x-1"
+              >
+                <Mic size={12} />
+                <span>Pro Voice</span>
+              </button>
             </div>
 
             {inputMode === 'text' ? (
@@ -207,6 +232,12 @@ const AgentOdiaWidget: React.FC<AgentOdiaWidgetProps> = ({ isEmbedded = false, o
           </div>
         </>
       )}
+      
+      {/* Voice Chat Interface */}
+      <VoiceChatInterface
+        isOpen={isVoiceChatOpen}
+        onClose={() => setIsVoiceChatOpen(false)}
+      />
     </div>
   );
 

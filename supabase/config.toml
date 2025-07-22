@@ -1,4 +1,8 @@
+
 project_id = "odyksappeylfvwibwaii"
 
 [functions.minimax-tts]
+verify_jwt = false
+
+[functions.elevenlabs-voice-chat]
 verify_jwt = false
