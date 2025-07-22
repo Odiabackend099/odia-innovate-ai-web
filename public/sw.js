@@ -1,6 +1,7 @@
-const CACHE_NAME = 'odia-dev-v1';
+const CACHE_NAME = 'odia-ai-nigeria-v2';
 const urlsToCache = [
   '/',
+  '/widget',
   '/offline.html',
   '/static/js/bundle.js',
   '/static/css/main.css',
@@ -71,10 +72,10 @@ function doBackgroundSync() {
   });
 }
 
-// Push notifications (optional)
+// Push notifications for Nigerian users
 self.addEventListener('push', (event) => {
   const options = {
-    body: event.data ? event.data.text() : 'New message from ODIA.dev',
+    body: event.data ? event.data.text() : 'New voice message from ODIA AI 🇳🇬',
     icon: '/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png',
     badge: '/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png',
     vibrate: [100, 50, 100],
@@ -85,7 +86,7 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-        title: 'Open ODIA.dev',
+        title: 'Open ODIA AI',
         icon: '/lovable-uploads/52828145-16b7-41c0-b621-3e86b1e9b572.png'
       },
       {
@@ -97,7 +98,7 @@ self.addEventListener('push', (event) => {
   };
 
   event.waitUntil(
-    self.registration.showNotification('ODIA.dev', options)
+    self.registration.showNotification('ODIA AI - Voice Message 🇳🇬', options)
   );
 });
 
