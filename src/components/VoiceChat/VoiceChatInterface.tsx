@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useVoiceChat } from '../../hooks/useVoiceChat';
+import { useMinimaxVoiceChat } from '../../hooks/useMinimaxVoiceChat';
 import VoiceChatHeader from './VoiceChatHeader';
 import VoiceChatMessages from './VoiceChatMessages';
 import VoiceChatControls from './VoiceChatControls';
@@ -23,7 +23,7 @@ const VoiceChatInterface: React.FC<VoiceChatInterfaceProps> = ({ isOpen, onClose
     stopVoiceChat,
     startRecording,
     stopRecording,
-  } = useVoiceChat(isOpen);
+  } = useMinimaxVoiceChat(isOpen);
 
   if (!isOpen) return null;
 

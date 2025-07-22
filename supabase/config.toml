@@ -1,1 +1,4 @@
 project_id = "odyksappeylfvwibwaii"
+
+[functions.minimax-tts]
+verify_jwt = false
