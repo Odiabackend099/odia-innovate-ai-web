@@ -160,7 +160,7 @@ const About = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl"
+                    className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl grayscale"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
