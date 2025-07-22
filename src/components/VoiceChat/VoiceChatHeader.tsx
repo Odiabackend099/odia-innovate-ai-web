@@ -16,8 +16,8 @@ const VoiceChatHeader: React.FC<VoiceChatHeaderProps> = ({ isConnected, onClose 
           <Bot className="w-6 h-6" />
         </div>
         <div>
-          <h2 className="text-2xl font-bold">ODIAAA Voice Chat</h2>
-          <p className="text-blue-100">AI Assistant for Africa 🇳🇬</p>
+          <h2 className="text-2xl font-bold">ODIA AI Voice Chat</h2>
+          <p className="text-blue-100">Powered by ElevenLabs • Professional AI Assistant 🇳🇬</p>
         </div>
       </div>
       
