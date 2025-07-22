@@ -8,56 +8,56 @@ const Services = () => {
 
   const services = [
     {
-      id: 'voice-automation',
-      icon: <Mic className="w-6 h-6" />,
-      title: 'Voice Automation',
-      description: 'Transform customer service with intelligent voice systems that understand multiple African languages and dialects.',
-      features: ['Multi-language support', 'Natural conversation', '24/7 availability'],
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50'
-    },
-    {
-      id: 'intelligent-chatbots',
+      id: 'whatsapp-automation',
       icon: <MessageSquare className="w-6 h-6" />,
-      title: 'Intelligent Chatbots',
-      description: 'Deploy smart chatbots that understand context, culture, and local business practices across Africa.',
-      features: ['Cultural awareness', 'Context understanding', 'Business integration'],
+      title: 'WhatsApp Business Automation',
+      description: 'Automate your Nigerian business customer service with Agent Lexi. Handle onboarding, trials, and upgrades seamlessly.',
+      features: ['Nigerian business queries', 'Customer onboarding', 'Trial management', 'Sales automation'],
       color: 'text-green-600',
       bgColor: 'bg-green-50'
     },
     {
-      id: 'african-language-nlp',
-      icon: <Bot className="w-6 h-6" />,
-      title: 'African Language NLP',
-      description: 'Advanced natural language processing specifically trained on African languages and cultural contexts.',
-      features: ['Yoruba, Hausa, Swahili', 'Cultural context', 'Dialect recognition'],
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50'
+      id: 'voice-ai-agents',
+      icon: <Mic className="w-6 h-6" />,
+      title: 'Voice AI Agents',
+      description: 'Deploy intelligent voice agents that speak English, Pidgin, Yoruba, and Hausa. Perfect for Nigerian customer service.',
+      features: ['Multi-language support', 'Nigerian accent recognition', '24/7 availability', 'Real-time responses'],
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50'
     },
     {
-      id: 'healthcare-ai',
-      icon: <Stethoscope className="w-6 h-6" />,
-      title: 'Healthcare AI',
-      description: 'Specialized AI solutions for African healthcare challenges, from diagnosis assistance to patient management.',
-      features: ['Diagnosis support', 'Patient management', 'Multilingual health'],
+      id: 'university-support',
+      icon: <Bot className="w-6 h-6" />,
+      title: 'University AI Support',
+      description: 'Agent MISS provides academic assistance and multilingual support for Nigerian universities and educational institutions.',
+      features: ['Academic assistance', 'Multilingual support', 'Student services', 'Administrative automation'],
       color: 'text-purple-600',
       bgColor: 'bg-purple-50'
     },
     {
-      id: 'government-ai',
+      id: 'legal-documentation',
       icon: <Building className="w-6 h-6" />,
-      title: 'Government AI',
-      description: 'Streamline public services with AI solutions designed for African government and civic applications.',
-      features: ['Public service automation', 'Citizen engagement', 'Multilingual support'],
+      title: 'Legal Documentation AI',
+      description: 'Agent Miss Legal helps with contract templates, NDPR compliance, and Nigerian legal document automation.',
+      features: ['Contract templates', 'NDPR compliance', 'Legal automation', 'Nigerian law focus'],
       color: 'text-indigo-600',
       bgColor: 'bg-indigo-50'
     },
     {
+      id: 'luxury-concierge',
+      icon: <Stethoscope className="w-6 h-6" />,
+      title: 'Luxury & Travel Concierge',
+      description: 'Agent Atlas provides VIP bookings and high-end client management for Nigerian entrepreneurs and luxury businesses.',
+      features: ['VIP bookings', 'Travel management', 'Luxury services', 'High-end client care'],
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50'
+    },
+    {
       id: 'custom-solutions',
       icon: <Zap className="w-6 h-6" />,
-      title: 'Custom Solutions',
-      description: 'Tailored AI solutions for unique African business challenges and opportunities.',
-      features: ['Custom development', 'Local integration', 'Scalable solutions'],
+      title: 'Custom Voice Solutions',
+      description: 'Tailored voice AI solutions for Nigerian businesses. From fintech to e-commerce, we build what you need.',
+      features: ['Custom development', 'Nigerian market focus', 'Scalable solutions', 'API integration'],
       color: 'text-yellow-600',
       bgColor: 'bg-yellow-50'
     }
@@ -76,11 +76,11 @@ const Services = () => {
       <div className="webflow-container">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold webflow-text-gradient mb-6">
-            AI Solutions Across Africa
+            Voice AI Solutions for Nigerian Businesses
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            From Lagos to Cairo, Nairobi to Cape Town - we're building AI solutions 
-            that understand Africa's unique challenges and opportunities.
+            From Lagos SMEs to Abuja enterprises - our specialized AI agents understand Nigerian business culture, 
+            languages, and market dynamics. Build automation that works for your customers.
           </p>
         </div>
 

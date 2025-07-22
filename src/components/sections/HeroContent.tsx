@@ -34,7 +34,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
             ODIA.dev
           </h1>
           <p className="text-sm text-muted-foreground font-medium">
-            AI Solutions for Africa
+            🇳🇬 Nigeria's First Voice AI Platform
           </p>
         </div>
       </div>
@@ -47,8 +47,8 @@ const HeroContent: React.FC<HeroContentProps> = ({
       </h1>
       
       <p className="text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed">
-        Empowering African businesses with cutting-edge artificial intelligence. 
-        From Lagos to Nairobi, we bring innovation to every corner of the continent.
+        Empowering Nigerian SMEs, universities, and government agencies with intelligent voice AI agents. 
+        From Lagos to Kano, automate your WhatsApp customer service and scale your business with voice technology.
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
@@ -73,7 +73,7 @@ const HeroContent: React.FC<HeroContentProps> = ({
         </div>
         <div className="flex items-center">
           <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-          15+ African Languages
+          English, Pidgin, Yoruba, Hausa
         </div>
         <div className="flex items-center">
           <div className="w-2 h-2 bg-warning rounded-full mr-2"></div>

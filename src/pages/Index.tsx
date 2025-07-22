@@ -8,6 +8,8 @@ import CEOSection from '../components/sections/CEOSection';
 import CofounderSection from '../components/sections/CofounderSection';
 import AIAvatarShowcase from '../components/sections/AIAvatarShowcase';
 import IEQServices from '../components/sections/IEQServices';
+import NigerianPricing from '../components/sections/NigerianPricing';
+import NigerianTestimonials from '../components/sections/NigerianTestimonials';
 import Stats from '../components/sections/Stats';
 import CaseStudies from '../components/sections/CaseStudies';
 import CallToAction from '../components/sections/CallToAction';
@@ -25,6 +27,8 @@ const Index = () => {
         <AIAvatarShowcase />
         <Stats />
         <IEQServices />
+        <NigerianPricing />
+        <NigerianTestimonials />
         <CaseStudies />
         <CallToAction />
       </main>

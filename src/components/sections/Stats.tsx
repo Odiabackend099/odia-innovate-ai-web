@@ -5,10 +5,10 @@ const Stats = () => {
   const [scrollY, setScrollY] = useState(0);
   
   const stats = [
-    { number: '50+', label: 'AI Solutions Deployed', icon: '🚀' },
-    { number: '15+', label: 'African Languages', icon: '🌍' },
-    { number: '98%', label: 'Client Satisfaction', icon: '⭐' },
-    { number: '24/7', label: 'Support Available', icon: '💬' },
+    { number: '200+', label: 'Nigerian Businesses Served', icon: '🏢' },
+    { number: '4', label: 'Nigerian Languages', icon: '🇳🇬' },
+    { number: '99%', label: 'Uptime SLA', icon: '⚡' },
+    { number: '₦15K', label: 'Starting Price/Month', icon: '💰' },
   ];
 
   useEffect(() => {
@@ -44,12 +44,13 @@ const Stats = () => {
               alt="ODIA.dev Logo" 
               className="w-12 h-12 mr-3"
             />
-            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              Trusted Across Africa
+            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
+              Leading Nigerian Voice AI Platform
             </h2>
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our AI solutions are making a real impact for companies from Lagos to Nairobi
+            From Lagos startups to Abuja enterprises, Nigerian businesses trust ODIA AI 
+            for their voice automation and customer service needs
           </p>
         </div>
 
