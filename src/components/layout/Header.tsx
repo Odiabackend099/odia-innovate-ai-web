@@ -18,6 +18,7 @@ const Header = () => {
       hasDropdown: true,
       submenu: [
         { name: 'AI Solutions', href: '/services' },
+        { name: 'Voice Agents', href: '/voice-agents' },
         { name: 'Custom Development', href: '/services' },
         { name: 'Consulting', href: '/services' }
       ]
