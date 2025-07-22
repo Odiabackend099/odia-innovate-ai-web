@@ -127,7 +127,7 @@ const IEQHero = () => {
               <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
                 <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-blue-accent/10 flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/b2deb74a-bc63-4e33-897b-5ef74c40a832.png" 
+                    src="/lovable-uploads/e6dc8533-41a4-4de8-b5c6-f47f6f4ec273.png" 
                     alt="AI Technology Dashboard" 
                     className="w-full h-full object-cover"
                   />
