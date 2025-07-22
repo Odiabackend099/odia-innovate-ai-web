@@ -11,8 +11,8 @@ const CEOSection = () => {
             <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
               <div className="aspect-square rounded-xl overflow-hidden">
                 <img 
-                  src="/lovable-uploads/8235b54e-f421-4dc6-8850-e18fb9a2418b.png" 
-                  alt="Austyn, CEO & Founder of ODIA.dev"
+                  src="/lovable-uploads/e4ecf514-3800-415c-b885-be4fdded4cc7.png" 
+                  alt="Austyn, CEO & Founder of ODIA.dev" 
                   className="w-full h-full object-cover"
                 />
               </div>
