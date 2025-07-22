@@ -10,7 +10,7 @@ const About = () => {
       name: 'Austyn',
       role: 'CEO & Founder',
       bio: 'Visionary leader driving AI innovation across Africa. Passionate about bridging technological gaps and empowering African businesses.',
-      image: '/lovable-uploads/e4ecf514-3800-415c-b885-be4fdded4cc7.png'
+      image: '/lovable-uploads/8235b54e-f421-4dc6-8850-e18fb9a2418b.png'
     },
     {
       name: 'Eva Jensen',
