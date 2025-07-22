@@ -11,7 +11,7 @@ const CallToAction = () => {
   };
 
   const handleTalkToAI = () => {
-    navigate('/contact');
+    navigate('/widget');
   };
 
   return (

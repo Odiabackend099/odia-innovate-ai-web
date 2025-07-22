@@ -1,8 +1,15 @@
 
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const ContactInfo = () => {
+  const navigate = useNavigate();
+
+  const handleStartChat = () => {
+    navigate('/widget');
+  };
+
   return (
     <div>
       <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent mb-8">
@@ -59,7 +66,10 @@ const ContactInfo = () => {
         <p className="text-blue-700 mb-6">
           Our AI assistant ODIAAA is available 24/7 to answer questions and help you explore our services.
         </p>
-        <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+        <button 
+          onClick={handleStartChat}
+          className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+        >
           Start Chat Now
         </button>
       </div>

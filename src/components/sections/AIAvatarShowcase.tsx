@@ -1,8 +1,15 @@
 
 import React from 'react';
 import { MessageSquare, Mic, Globe, Zap } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const AIAvatarShowcase = () => {
+  const navigate = useNavigate();
+
+  const handleStartChat = () => {
+    navigate('/widget');
+  };
+
   const features = [
     {
       icon: <MessageSquare className="w-6 h-6" />,
@@ -143,7 +150,10 @@ const AIAvatarShowcase = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-12 py-4 rounded-xl font-bold text-lg hover:from-primary-glow hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+          <button 
+            onClick={handleStartChat}
+            className="bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-12 py-4 rounded-xl font-bold text-lg hover:from-primary-glow hover:to-primary transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+          >
             🤖 Start Chatting with Agent Odia
           </button>
         </div>
