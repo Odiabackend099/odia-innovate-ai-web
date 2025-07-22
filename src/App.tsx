@@ -8,6 +8,7 @@ import CaseStudies from './pages/CaseStudies';
 import Contact from './pages/Contact';
 import ServiceDetail from './pages/ServiceDetail';
 import Widget from './pages/Widget';
+import VoiceAgents from './pages/VoiceAgents';
 import NotFound from './pages/NotFound';
 import { Toaster } from './components/ui/toaster';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -27,6 +28,7 @@ function App() {
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/widget" element={<Widget />} />
+            <Route path="/voice-agents" element={<VoiceAgents />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Toaster />

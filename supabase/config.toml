@@ -6,3 +6,6 @@ verify_jwt = false
 
 [functions.elevenlabs-voice-chat]
 verify_jwt = false
+
+[functions.elevenlabs-agents]
+verify_jwt = false
