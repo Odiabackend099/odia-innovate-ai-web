@@ -29,13 +29,21 @@ const ProfessionalHero = () => {
   ];
 
   return (
-    <section className="ieq-hero-bg min-h-screen relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 ieq-pattern-dots"></div>
+    <section className="min-h-screen relative overflow-hidden">
+      {/* Background Image with IEQ Capital Navy Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(135deg, hsl(214 100% 15% / 0.85), hsl(214 100% 10% / 0.9)), url('/lovable-uploads/2fef13c1-05fa-4c94-ab3c-871a9db245c7.png')`
+        }}
+      />
+      
+      {/* Background Pattern Overlay */}
+      <div className="absolute inset-0 ieq-pattern-grid opacity-5"></div>
       
       {/* Floating Elements */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 right-20 w-40 h-40 bg-gold/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-20 left-20 w-32 h-32 bg-white/5 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 right-20 w-40 h-40 bg-white/3 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
 
       <div className="relative z-10 ieq-container py-24 lg:py-32">
         <div className="grid lg:grid-cols-12 gap-12 items-center">

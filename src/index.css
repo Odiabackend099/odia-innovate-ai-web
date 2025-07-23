@@ -7,27 +7,27 @@
 
 @layer base {
   :root {
-    /* IEQ Capital color palette */
+    /* IEQ Capital exact color palette */
     --background: 0 0% 100%;
-    --foreground: 220 20% 12%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 12%;
+    --card: 214 100% 15%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 12%;
+    --popover: 214 100% 15%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 220 85% 20%;        /* Deep navy blue */
+    --primary: 214 100% 15%;        /* IEQ Capital navy blue */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 95%;
-    --secondary-foreground: 220 20% 12%;
+    --secondary: 214 50% 85%;
+    --secondary-foreground: 214 100% 15%;
 
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 12% 45%;
+    --muted: 214 30% 90%;
+    --muted-foreground: 214 50% 45%;
 
-    --accent: 45 95% 50%;           /* Gold accent */
-    --accent-foreground: 220 20% 12%;
+    --accent: 214 100% 40%;         /* Lighter navy accent */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -38,21 +38,21 @@
 
     --radius: 0.5rem;
 
-    /* IEQ Capital specific colors */
-    --navy: 220 85% 20%;
+    /* IEQ Capital exact colors */
+    --navy: 214 100% 15%;
     --navy-foreground: 0 0% 100%;
-    --gold: 45 95% 50%;
-    --gold-foreground: 220 20% 12%;
-    --surface: 220 15% 98%;
-    --surface-elevated: 0 0% 100%;
-    --text-primary: 220 20% 12%;
-    --text-secondary: 220 12% 45%;
-    --text-tertiary: 220 8% 65%;
+    --navy-light: 214 100% 25%;
+    --navy-dark: 214 100% 10%;
+    --surface: 214 100% 15%;
+    --surface-elevated: 214 100% 18%;
+    --text-primary: 0 0% 100%;
+    --text-secondary: 214 30% 85%;
+    --text-tertiary: 214 20% 70%;
 
-    /* Professional gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 85% 20%), hsl(220 75% 15%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 95% 50%), hsl(40 90% 45%));
-    --gradient-surface: linear-gradient(135deg, hsl(220 15% 98%), hsl(220 10% 96%));
+    /* IEQ Capital gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 20%), hsl(214 100% 10%));
+    --gradient-navy: linear-gradient(135deg, hsl(214 100% 15%), hsl(214 100% 25%));
+    --gradient-surface: linear-gradient(135deg, hsl(214 100% 15%), hsl(214 100% 18%));
     
     /* Professional shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -71,43 +71,43 @@
   }
 
   .dark {
-    --background: 220 20% 8%;
+    --background: 214 100% 8%;
     --foreground: 0 0% 95%;
 
-    --card: 220 20% 10%;
+    --card: 214 100% 12%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 220 20% 10%;
+    --popover: 214 100% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 220 85% 30%;
+    --primary: 214 100% 20%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 20% 15%;
+    --secondary: 214 50% 20%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 20% 15%;
-    --muted-foreground: 220 12% 65%;
+    --muted: 214 30% 15%;
+    --muted-foreground: 214 20% 65%;
 
-    --accent: 45 95% 60%;
-    --accent-foreground: 220 20% 8%;
+    --accent: 214 100% 30%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 220 20% 15%;
-    --input: 220 20% 15%;
-    --ring: 220 85% 30%;
+    --border: 214 50% 20%;
+    --input: 214 50% 20%;
+    --ring: 214 100% 25%;
 
-    --navy: 220 85% 30%;
+    --navy: 214 100% 20%;
     --navy-foreground: 0 0% 100%;
-    --gold: 45 95% 60%;
-    --gold-foreground: 220 20% 8%;
-    --surface: 220 20% 10%;
-    --surface-elevated: 220 20% 12%;
+    --navy-light: 214 100% 30%;
+    --navy-dark: 214 100% 8%;
+    --surface: 214 100% 12%;
+    --surface-elevated: 214 100% 15%;
     --text-primary: 0 0% 95%;
-    --text-secondary: 220 12% 65%;
-    --text-tertiary: 220 8% 45%;
+    --text-secondary: 214 20% 75%;
+    --text-tertiary: 214 15% 55%;
   }
 }
 
