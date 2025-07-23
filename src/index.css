@@ -201,15 +201,15 @@
 
   /* Professional card styles */
   .ieq-team-card {
-    @apply ieq-card p-8 text-center hover:shadow-lg transition-all duration-300 group;
+    @apply ieq-card p-8 text-center hover:shadow-lg transition-all duration-300;
   }
 
   .ieq-service-card {
-    @apply ieq-card p-6 hover:shadow-lg transition-all duration-300 group border-l-4 border-l-primary;
+    @apply ieq-card p-6 hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary;
   }
 
   .ieq-news-card {
-    @apply ieq-card overflow-hidden hover:shadow-lg transition-all duration-300 group;
+    @apply ieq-card overflow-hidden hover:shadow-lg transition-all duration-300;
   }
 
   /* Professional patterns */
